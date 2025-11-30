@@ -1,0 +1,47 @@
+.balanceSection {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.balanceAmount {
+  font-size: 30px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  .balanceAmount {
+    font-size: 34px;
+  }
+}
+
+.balanceLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.eyeIcon {
+  width: 18px;
+  height: 18px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.chevronIcon {
+  width: 16px;
+  height: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-right: -4px;
+}
