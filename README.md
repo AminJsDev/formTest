@@ -1,88 +1,53 @@
-# Persian Banking App UI
+# React + TypeScript + Vite + Material-UI
 
-A React + TypeScript application that replicates a Persian banking app home screen with a modern, clean design.
-
-## Features
-
-- **Header Section**: Dark navy background with title "خانه" and navigation icons
-- **Balance Display**: Large balance amount with "موجودی" label and eye icon
-- **Action Buttons**: Two circular buttons for "گزارش مالی" and "شارژ حساب"
-- **Transaction List**: White rounded panel with transaction items
-- **Bottom Navigation**: Fixed bottom bar with 5 navigation icons
-- **Responsive Design**: Centered mobile-first layout (max-width: 428px)
-
-## Tech Stack
-
-- React 18
-- TypeScript
-- Vite
-- CSS Modules
-- Lucide React (for icons)
-
-## Getting Started
-
-### Installation
-
-```bash
-npm install
-```
-
-### Development
-
-```bash
-npm run dev
-```
-
-The app will be available at `http://localhost:5173`
-
-### Build
-
-```bash
-npm run build
-```
-
-### Preview Production Build
-
-```bash
-npm run preview
-```
+A modern React application with Material-UI, featuring a clean component architecture and RTL support.
 
 ## Project Structure
 
 ```
 src/
 ├── components/
-│   ├── Header.tsx
-│   ├── BalanceSection.tsx
-│   ├── ActionButtons.tsx
-│   ├── TransactionItem.tsx
-│   └── BottomNav.tsx
-├── pages/
-│   └── HomePage.tsx
-├── styles/
-│   ├── homepage.module.css
-│   ├── header.module.css
-│   ├── balanceSection.module.css
-│   ├── actionButtons.module.css
-│   ├── transactionItem.module.css
-│   └── bottomNav.module.css
-├── App.tsx
-└── main.tsx
+│   ├── common/              # Reusable UI components
+│   │   ├── ActionButton.tsx
+│   │   └── BalanceCard.tsx
+│   ├── layout/              # Layout components
+│   │   ├── AppHeader.tsx
+│   │   └── BottomNavigation.tsx
+│   └── features/            # Feature-specific components
+│       ├── ActionButtonsGroup.tsx
+│       ├── TransactionList.tsx
+│       ├── TransactionListItem.tsx
+│       └── TransactionsBottomSheet.tsx
+├── hooks/                   # Custom React hooks
+│   └── useBottomSheet.ts
+├── types/                   # TypeScript type definitions
+│   └── transaction.ts
+├── theme/                   # MUI theme configuration
+│   └── theme.ts
+└── pages/                   # Page components
+    └── HomePage.tsx
 ```
 
-## Design Details
+## Features
 
-- **Header Background**: `#0B1E46` (Dark Navy)
-- **Primary Accent**: `#FFD700` (Yellow/Gold)
-- **Transaction Highlight**: `#FFF9C4` (Light Yellow)
-- **Text Colors**: White for header, Dark gray for content
-- **RTL Support**: Full right-to-left layout for Persian text
+- Material-UI components with custom theme
+- RTL (Right-to-Left) support for Persian/Arabic
+- Custom hooks for reusable logic
+- TypeScript for type safety
+- Modular component architecture
+- Responsive design
 
-## Notes
+## Getting Started
 
-- The page is designed to match a mobile banking app interface
-- All text is in Persian (Farsi)
-- The layout is responsive and centered
-- Bottom navigation is fixed at the bottom of the screen
+```bash
+npm install
+npm run dev
+```
 
-# formTest
+## Architecture Benefits
+
+- **Separation of Concerns**: Components are organized by purpose (common, layout, features)
+- **Reusability**: Common components can be used across the app
+- **Maintainability**: Clear structure makes it easy to find and update code
+- **Scalability**: Easy to add new features without cluttering existing code
+- **Type Safety**: TypeScript interfaces ensure data consistency
